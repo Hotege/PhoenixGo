@@ -195,6 +195,7 @@ void CreateQuickLog2Table() {
 }
 
 #if defined(_WIN32) || defined(_WIN64)
+#if !defined(rand_r)
 static int rand_r(unsigned int *seed)
 {
     unsigned int next = *seed;
@@ -218,6 +219,7 @@ static int rand_r(unsigned int *seed)
 
     return result;
 }
+#endif
 #endif
 
 void CreateZobristHash() {

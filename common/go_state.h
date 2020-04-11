@@ -28,9 +28,11 @@
 #include "go_comm.h"
 
 #if defined(_WIN32) || defined(_WIN64)
+#if !defined(__MINGW32__) && !defined(__MINGW64__)
 #  include <intrin.h>
 #  define __builtin_popcount __popcnt
 #  define __builtin_popcountll __popcnt64
+#endif
 #endif
 
 template<class IntType>
