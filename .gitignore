@@ -21,4 +21,4 @@ Debug
 .clang
 
 .vscode
-build-MinGW
+build-*
